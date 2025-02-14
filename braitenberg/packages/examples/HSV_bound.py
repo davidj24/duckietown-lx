@@ -1,5 +1,4 @@
 import sys
-
 import cv2
 import duckietown_code_utils as dcu
 import numpy as np
