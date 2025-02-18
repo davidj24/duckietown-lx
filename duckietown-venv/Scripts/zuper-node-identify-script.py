@@ -1,10 +1,10 @@
 #!C:\Users\tkdav\OneDrive\Desktop\duckietown-lx\duckietown-venv\Scripts\python.exe
-# EASY-INSTALL-ENTRY-SCRIPT: 'compmake==4.0.2','console_scripts','compmake'
+# EASY-INSTALL-ENTRY-SCRIPT: 'zuper-nodes==2.0.3','console_scripts','zuper-node-identify'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'compmake==4.0.2'
+__requires__ = 'zuper-nodes==2.0.3'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('compmake==4.0.2', 'console_scripts', 'compmake')())
+    sys.exit(load_entry_point('zuper-nodes==2.0.3', 'console_scripts', 'zuper-node-identify')())
