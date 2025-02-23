@@ -1,0 +1,2 @@
+Although I completed the activity for this part of the software exercise, I didn't actually do them with the duckiebot and our own
+measuerements yet for our hardware.

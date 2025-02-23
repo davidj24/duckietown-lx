@@ -14,7 +14,6 @@ def delta_phi(ticks: int, prev_ticks: int, resolution: int) -> Tuple[float, floa
         ticks: current number of ticks.
     """
 
-    # TODO: these are random values, you have to implement your own solution in here
     delta_ticks = ticks - prev_ticks
     
     # The resolution is N_tot. In order to get the amount of rotation per tick in radians, we do 2pi/resolution. This is our alpha
@@ -59,8 +58,11 @@ def pose_estimation(
     delta_left = R * delta_phi_left
     delta_right = R * delta_phi_right
     delta_center_of_mass = (delta_left + delta_right)/2
-    x_curr = x_prev + delta_x
-    y_curr = np.random.random()
-    theta_curr = np.random.random()
-    # ---
+    x_curr = x_prev + delta_center_of_mass*np.cos(theta_prev) # The reason we use theta_prev here instead of theta_curr is because we're using the change in x
+                                                              # resulting from the theta value of the previous x position.
+    y_curr = y_prev + delta_center_of_mass*np.sin(theta_prev)
+
+    delta_theta = (delta_right - delta_left)/baseline
+    theta_curr = theta_prev + delta_theta
+    
     return x_curr, y_curr, theta_curr
