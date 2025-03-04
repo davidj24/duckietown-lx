@@ -38,6 +38,7 @@ def PIDController(
     ki = gains['ki']
 
     # ------------- DEFINE YOUR PID FUNCTION BELOW ---------
+    # Why would a lateral posiiton offset make a difference in our PID controller? Isn't the whole point that it keeps track over time of it's heading?
 
     # These are random values, replace with your implementation of a PID controller in here
     omega = np.random.uniform(-8.0, 8.0)
