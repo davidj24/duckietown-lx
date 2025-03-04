@@ -46,5 +46,6 @@ def PIDController(
     e_deriv = (e - prev_e_y)/delta_t # Recall that to approximate derivatives, we use a backwards Euler which is really just rise over run
     # ---
     
-    omega = (kp * e) + (ki * e_int) + (kd * e_deriv)
+    omega = (kp * e) + (ki * e_int) + (kd * e_deriv) # This seems wrong tho... why would the omega contain data on the error of the y coordinate? It's
+                                                     # just supposed to be the rate of change of the heading right?                                                        
     return v_0, omega, e, e_int
